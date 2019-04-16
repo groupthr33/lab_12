@@ -1,0 +1,21 @@
+<!DOCTYPE>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Registration</title>
+</head>
+<body>
+        <h1>User Registration</h1>
+
+        <form method="post" action="/">
+            <label id="username" for="uName">Please enter a username:</label><br/>
+            <input type="text" id="uName" name="uName" pattern="[A-Aa-z]*"/><br/>
+
+            <label id="password" for="pWord">Please enter a password:</label><br>
+            <input type="password" id="pWord" name="pWord" pattern="^\w*(?=\w*\d)(?=\w*[a-z])(?=\w*[A-Z])\w*$"/><br/>
+
+            <input type="submit"/>
+        </form>
+
+</body>
+</html>
