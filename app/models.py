@@ -8,5 +8,5 @@ class User(models.Model):
 
 class Gift(models.Model):
     name = models.CharField(max_length=20)
-    receiver = models.ForeignKey(User, on_delete=models.CASADE, blank=False, null=True, default=None)
+    receiver = models.ForeignKey(User, on_delete=models.CASCADE, blank=False, null=True, default=None)
 
