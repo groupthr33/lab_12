@@ -11,8 +11,7 @@ class User(View):
 
 class Registration(View):
     def get(self, request):
-        a = User()
-        return render(request, 'main/users.html')
+        return render(request, 'main/registration.html')
 
     def post(self, request):
         a = User()
