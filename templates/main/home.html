@@ -1,0 +1,13 @@
+{%extends "main/nav.html" %}
+{% block command-content %}
+    <div style="text-align: center" >
+    <form method="post" action="#">
+        {%csrf_token%}
+        <label name="usernamelabel" for="username">Username: </label>
+        <input type="text" name="username" autofocus placeholder="type username"/><br/>
+        <label name="passwordlabel" for="password">Password: </label>
+        <input type="text" name="password" autofocus placeholder="type password"/><br/>
+        <input type="submit" value="login"/>
+    </form>
+    </div>
+{% endblock command-content %}

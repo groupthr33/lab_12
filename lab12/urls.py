@@ -19,6 +19,7 @@ from app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('user/', views.User.as_view()),
-    path('registration/', views.Registration.as_view())
+    path('registration/', views.Registration.as_view()),
+    path('users/', views.User.as_view()),
+    path('', views.Home.as_view())
 ]
