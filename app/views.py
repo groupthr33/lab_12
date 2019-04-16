@@ -1,15 +1,21 @@
 from django.shortcuts import render
 from django.views import View
 
-# Create your views here.
+
 class User(View):
     def get(self, request):
         some_data = {"my_text": "hello world"}
         return render(request, 'main/users.html', some_data)
 
+
 class Registration(View):
     def get(self, request):
-        return render(request, 'main/users.html', some_data)
+        a = User()
+        return render(request, 'main/users.html')
 
     def post(self, request):
-        return render(request, 'main/users.html', some_data)
+        a = User()
+        a.username = str(request.POST["uName"])
+        a.password = str(request.POST["pWord"])
+        a.save()
+        return render(request, 'main/users.html')
