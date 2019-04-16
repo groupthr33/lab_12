@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="nav">
+
+        <a href="/dashboard">Dashboard</a>
+                    <a href="/users">users</a>
+    </div>
+    <div class="command-content">
+        {% block command-content %}
+        {% endblock command-content %}
+    </div>
+{% endblock content %}
